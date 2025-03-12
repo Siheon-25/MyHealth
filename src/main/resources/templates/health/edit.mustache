@@ -1,0 +1,17 @@
+{{>layouts/header}}
+{{#health}}
+<form class="container" action="/health/update" method="post">
+    <input name="id" type="hidden" value="{{id}}">
+    <div class="mb-3">
+        <label class="form-label">날짜</label>
+        <input type="text" class="form-control" name="date" value="{{date}}">
+    </div>
+    <div>
+        <label class="form-label">내용</label>
+        <textarea class="form-control" rows="3" name="content">{{content}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <a href="/health/date{{health.id}}">Back</a>
+</form>
+{{/health}}
+{{>layouts/footer}}

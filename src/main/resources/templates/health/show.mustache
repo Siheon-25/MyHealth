@@ -1,0 +1,24 @@
+{{>layouts/header}}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#health}}
+    <tr>
+        <th>{{id}}</th>
+        <th>{{date}}</th>
+        <th>{{content}}</th>
+    </tr>
+    {{/health}}
+    </tbody>
+</table>
+<a href="/health/date{{health.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/health/date{{health.id}}/delete" class="btn btn-danger">Delete</a>
+<a href="/health/dateAll">Go to AllList</a>
+{{>layouts/footer}}

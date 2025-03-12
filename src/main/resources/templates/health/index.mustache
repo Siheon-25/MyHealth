@@ -1,0 +1,21 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Date</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#healthList}}
+        <tr>
+            <th>{{id}}</th>
+            <th><a href="/health/date{{id}}">{{date}}</a></th>
+            <th>{{content}}</th>
+        </tr>
+    {{/healthList}}
+    </tbody>
+</table>
+<a href="/health/record">New Record</a>
+{{>layouts/footer}}
